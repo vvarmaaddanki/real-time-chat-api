@@ -8,8 +8,8 @@ The application provides user authentication and a real-time chat interface, wit
 
 ## 🚀 Live Demo
 
-### 🌐 Frontend
-🔗 *Live Demo:* [http://localhost:5173/]
+### 🌐 Frontend API
+🔗 *API:* [http://localhost:5173/]
 
 ### ⚙️ Backend API
 🔗 *API:* [http://127.0.0.1:8000/]
@@ -55,7 +55,8 @@ Example endpoints:
 ```text
 /api/
 /api/chat/
- A V Varma: 🗄️ Database
+ 
+🗄️ Database
 The application is designed to work with PostgreSQL for persistent data storage.
 🎨 Modern Frontend
 The frontend is built using Vite, providing a fast development environment and modern frontend tooling.
