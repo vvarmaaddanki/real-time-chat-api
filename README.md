@@ -115,10 +115,13 @@ cd Real-Time-Chat-Application
 cd backend
 3️⃣ Create Virtual Environment
 python -m venv venv
+
 Activate it on Windows:
 source venv/Scripts/activate
+
 4️⃣ Install Python Dependencies
 pip install -r requirements.txt
+
 5️⃣ Configure Environment Variables
 Create a .env file inside the backend directory.
 Example:
