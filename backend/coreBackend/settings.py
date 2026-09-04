@@ -18,13 +18,12 @@ SECRET_KEY = "django-insecure-local-development-key-123456789"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+ALLOWED_HOSTS = ["*"]
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "localhost",
     "realtime-chatapp-frontend.vercel.app",
-    "http://127.0.0.1:8000/"
-    "https://real-time-chat-api-rmdi.onrender.com"
+    "real-time-chat-api-rmdi.onrender.com",
 ]
 
 # Application definition
