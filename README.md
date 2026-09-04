@@ -6,7 +6,7 @@ The application provides user authentication and a real-time chat interface, wit
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Demo URL : https://real-time-chat-api-rmdi.onrender.com
 
 ### 🌐 Frontend API
 🔗 *API:* [http://localhost:5173/]
