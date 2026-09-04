@@ -1,100 +1,277 @@
-# Real-Time Chat Application
+ A V Varma: # 💬 Real-Time Chat Application
 
-A full-stack chat application built with Django REST Framework for the backend and React for the frontend. This application allows users to register, login, send messages, and manage their contacts in a real-time manner using polling.
+A full-stack *Real-Time Chat Application* built with *Django REST Framework* and a modern *Vite-based frontend*.
 
-## Features
+The application provides user authentication and a real-time chat interface, with a REST API backend designed to support communication between users.
 
-- **User Authentication**: Secure registration and login using JWT (JSON Web Tokens) with refresh token support.
-- **Real-Time Messaging**: Send and receive messages with polling-based updates to simulate real-time chat.
-- **Message Management**: View message history, mark messages as read, and fetch new messages after a specific ID.
-- **User Blocking**: Block other users to prevent sending or receiving messages from them.
-- **Contact Management**: View a list of all users and manage interactions.
-- **Responsive UI**: Modern, responsive interface built with React, Bootstrap, and CSS.
-- **Throttling**: Rate limiting on message sending and registration to prevent abuse.
-- **CORS Support**: Configured for cross-origin requests, allowing frontend-backend communication.
+---
 
-## Tech Stack
+## 🚀 Live Demo
 
-### Backend
-- **Django 5.2.8**: Web framework for building the API.
-- **Django REST Framework**: For building RESTful APIs.
-- **Simple JWT**: For token-based authentication.
-- **SQLite**: Database.
-- **Django CORS Headers**: To handle cross-origin requests.
-- **Python-dotenv**: For environment variable management.
+### 🌐 Frontend
+🔗 *Live Demo:* [http://localhost:5173/]
 
-### Frontend
-- **React 19.2.0**: JavaScript library for building the user interface.
-- **Vite**: Build tool for fast development and bundling.
-- **Axios**: HTTP client for API requests.
-- **Bootstrap 5.3.8**: CSS framework for responsive design.
-- **CSS**: CSS for styling.
+### ⚙️ Backend API
+🔗 *API:* [http://127.0.0.1:8000/]
 
-## Prerequisites
+> Note: The live links will be added after deployment.
 
-- Python 3.8 or higher
-- Node.js 16 or higher
-- npm or yarn
+---
 
-## Installation and Setup
+## 📌 Project Overview
 
-### Backend Setup
+The *Real-Time Chat Application* is a full-stack web application designed to provide users with a simple and responsive platform for authentication and real-time communication.
 
-1. Navigate to the backend directory:
-   ```
-   cd backend
-   ```
+The project follows a separated frontend and backend architecture:
 
-2. Create a virtual environment (optional but recommended):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+- *Frontend* handles the user interface and user interactions.
+- *Backend* provides REST APIs, authentication, database management, and chat functionality.
+- *Database* stores users, chat-related information, and application data.
 
-3. Install dependencies:
-   ```
-   pip install -r requirements.txt
-   ```
+---
 
-4. Set up environment variables:
-   - Create a `.env` file in the `backend` directory.
-   - Add the following variables:
-     ```
-     DJANGO_SECRET_KEY=your-secret-key-here
-     REGISTRATION_SECRET=your-registration-secret-here
-     ```
-     - `DJANGO_SECRET_KEY`: A unique secret key for Django (generate a random string).
-     - `REGISTRATION_SECRET`: A secret key required for user registration.
+## ✨ Features
 
-5. Run database migrations:
-   ```
-   python manage.py migrate
-   ```
+### 🔐 User Authentication
 
-6. Start the Django development server:
-   ```
-   python manage.py runserver
-   ```
-   The backend will be running at `http://127.0.0.1:8000/`.
+- User registration
+- User login
+- Username and password authentication
+- Protected application functionality
 
-### Frontend Setup
+### 💬 Real-Time Chat
 
-1. Install dependencies:
+- Chat interface for users
+- Real-time communication architecture
+- Chat API endpoint
+- Message handling through the backend
 
-2. Start the Vite development server:
-   ```
-   npm run dev
-   ```
-   The frontend will be running at `http://localhost:5173/` (default Vite port).
+### 🔌 REST API
 
-## Usage
+The backend exposes API endpoints for frontend communication.
 
-1. Open your browser and go to the frontend URL (e.g., `http://localhost:5173/`).
-2. Register a new account using the registration form (requires the `REGISTRATION_SECRET`).
-3. Login with your credentials.
-4. Start chatting by selecting a user from the contact list.
-5. Send messages and view them in real-time (via polling).
-6. Use the block feature to manage unwanted interactions.
+Example endpoints:
+
+```text
+/api/
+/api/chat/
+ A V Varma: 🗄️ Database
+The application is designed to work with PostgreSQL for persistent data storage.
+🎨 Modern Frontend
+The frontend is built using Vite, providing a fast development environment and modern frontend tooling.
+🛠️ Tech Stack
+Backend
+Python
+Django 5.2.8
+Django REST Framework
+Django Authentication
+PostgreSQL
+Django ORM
+Frontend
+JavaScript
+Vite
+HTML5
+CSS3
+npm
+Development Tools
+Git
+GitHub
+Git Bash
+Visual Studio Code
+
+🏗️ Project Architecture
+Real-Time-Chat-Application/
+│
+├── backend/
+│   ├── coreBackend/
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── ...
+│   │
+│   ├── accounts/
+│   ├── chat/
+│   ├── manage.py
+│   ├── requirements.txt
+│   └── ...
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.js
+│   └── ...
+│
+├── .gitignore
+└── README.md
+⚙️ Local Setup
+Follow the steps below to run the project locally.
+1️⃣ Clone the Repository
+git clone https://github.com/vvarmaaddanki/real-time-chat-api.git
+Move into the project:
+cd Real-Time-Chat-Application
+
+🐍 Backend Setup
+2️⃣ Navigate to Backend
+cd backend
+3️⃣ Create Virtual Environment
+python -m venv venv
+Activate it on Windows:
+source venv/Scripts/activate
+4️⃣ Install Python Dependencies
+pip install -r requirements.txt
+5️⃣ Configure Environment Variables
+Create a .env file inside the backend directory.
+Example:
+SECRET_KEY=your-secret-key
+DEBUG=True
+
+DB_NAME=your_database_name
+DB_USER=your_database_user
+DB_PASSWORD=your_database_password
+DB_HOST=localhost
+DB_PORT=5432
+Never commit your real .env file or secret keys to GitHub.
+
+6️⃣ Run Database Migrations
+python manage.py migrate
+
+7️⃣ Start Django Server
+python manage.py runserver
+The backend will run at:
+http://127.0.0.1:8000/
+
+⚛️ Frontend Setup
+Open another terminal.
+
+8️⃣ Navigate to Frontend
+cd frontend
+
+9️⃣ Install Node Dependencies
+npm install
+🔟 Start Vite Development Server
+npm run dev
+The frontend will run at:
+http://localhost:5173/
+🧪 Local Testing
+Once both servers are running:
+Backend
+http://127.0.0.1:8000/
+Frontend
+http://localhost:5173/
+Open the frontend URL in your browser.
+You should see the Login page with:
+Username
+Password
+Login button
+New User / Register option
+🔄 Application Flow
+                 ┌─────────────────────┐
+                 │       User          │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │      Frontend       │
+                 │   Vite / JavaScript │
+                 └──────────┬──────────┘
+                            │
+                     REST API Requests
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │       Django        │
+                 │   REST Framework    │
+                 └──────────┬──────────┘
+                            │
+                            ▼
+                 ┌─────────────────────┐
+                 │     PostgreSQL      │
+                 │      Database       │
+                 └─────────────────────┘
+🔐 Security
+The project follows basic security practices such as:
+Environment variables for sensitive configuration
+Django authentication
+Protected API functionality
+.gitignore for sensitive/local files
+Separate development and production configuration
+For production deployment:
+DEBUG=False
+should be used and production environment variables should be configured securely
+
+📊 API Endpoints
+Method
+Endpoint
+Description
+GET/POST
+/api/
+API root
+GET/POST
+/api/chat/
+Chat functionality
+Add additional endpoints here as the API grows.
+
+🧑‍💻 Development
+Start the backend:
+cd backend
+source venv/Scripts/activate
+python manage.py runserver
+Start the frontend in another terminal:
+cd frontend
+npm install
+npm run dev
+
+🚀 Deployment
+The application can be deployed using a separate frontend and backend deployment architecture.
+Frontend
+The Vite frontend can be deployed using platforms such as:
+Vercel
+Netlify
+Backend
+The Django backend can be deployed using platforms such as:
+Render
+Railway
+PythonAnywhere
+Database
+PostgreSQL can be hosted using:
+Render PostgreSQL
+Railway PostgreSQL
+Supabase
+
+🎯 Future Improvements
+Planned improvements may include:
+Online/offline user status
+Typing indicators
+Message timestamps
+Read receipts
+User profile management
+Chat history
+Group conversations
+File and image sharing
+Improved notifications
+WebSocket-based communication
+Production monitoring and logging
+
+📚 Learning Outcomes
+This project demonstrates practical experience with:
+Django backend development
+Django REST Framework
+REST API development
+User authentication
+PostgreSQL database integration
+Frontend and backend integration
+Vite frontend development
+Environment variable management
+Git and GitHub
+Full-stack application deployment
+
+👨‍💻 Author
+Your Name: ADDANKI VENKATESH VARMA
+Backend Developer | Python | Django | Django REST Framework | PostgreSQL
+GitHub
+🔗 https://github.com/vvarmaaddanki
+LinkedIn
+🔗 https://www.linkedin.com/in/vvarmaaddanki/
 
 ## Contributing
 
